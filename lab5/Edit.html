@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Editare EA FC 26 (HTML5)</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        
+
+        header {
+            border-bottom: 2px solid #00ff00;
+        }
+
+        header h1 {
+            font-size: 1.8em;
+        }
+
+        header a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        header a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .edit-container {
+            background-color: #1a1a1a;
+            border: 1px solid #00ff00;
+            padding: 30px;
+            width: 100%;
+            max-width: 550px;
+            border-radius: 4px;
+        }
+
+        fieldset {
+            border: 1px solid #444;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        legend {
+            color: #00ff00;
+            font-weight: bold;
+            padding: 0 10px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 0.9em;
+        }
+
+        input[type="text"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            background-color: #2a2a2a;
+            border: 1px solid #444;
+            color: white;
+            box-sizing: border-box;
+            border-radius: 4px;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background-color: #00ff00;
+            color: black;
+            border: none;
+            padding: 12px 25px;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+            text-transform: uppercase;
+            transition: background 0.3s;
+        }
+
+        .submit-btn:hover {
+            background-color: #00cc00;
+        }
+
+        footer {
+            border-top: 1px solid #333;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>MODIFICARE PRODUS: EA FC 26</h1>
+        <p><a href="store.html">Anulează și revino la Magazin</a></p>
+    </header>
+
+    <main>
+        <div class="edit-container">
+            <form action="store.html" method="get">
+                <fieldset>
+                    <legend>Editează Câmpurile</legend>
+                    
+                    <div class="form-group">
+                        <label>Titlu curent:</label>
+                        <input type="text" name="titlu" value="EA SPORTS FC 26" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Modifică Preț (€):</label>
+                        <input type="text" name="pret" value="69.99">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Schimbă Categorie:</label>
+                        <select name="cat">
+                            <option selected>Sport</option>
+                            <option>Acțiune</option>
+                            <option>Simulare</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Actualizează Descrierea:</label>
+                        <textarea name="desc" rows="4">Simte intensitatea fotbalului cu tehnologia Hypermotion V. Ediție actualizată.</textarea>
+                    </div>
+                </fieldset>
+
+                <button type="submit" class="submit-btn">Actualizează Informațiile</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 AleXteam</p>
+    </footer>
+
+</body>
+</html>

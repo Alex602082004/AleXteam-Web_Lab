@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Adăugare Joc Nou (HTML5)</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        
+
+        header {
+            border-bottom: 2px solid #00ff00;
+        }
+
+        header h1 {
+            font-size: 1.8em;
+            text-transform: uppercase;
+        }
+
+        header a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 0.9em;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        header a:hover {
+            text-decoration: underline;
+            color: #00ff00;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+        }
+
+        .form-container {
+            background-color: #1a1a1a;
+            border: 1px solid #333;
+            padding: 30px;
+            width: 100%;
+            max-width: 550px;
+            border-radius: 4px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+        }
+
+        fieldset {
+            border: 1px solid #444;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        legend {
+            color: #00ff00;
+            font-weight: bold;
+            padding: 0 10px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 0.9em;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            background-color: #2a2a2a;
+            border: 1px solid #444;
+            color: white;
+            box-sizing: border-box;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        input:focus, textarea:focus, select:focus {
+            outline: none;
+            border-color: #00ff00;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        .save-btn {
+            background-color: #00ff00;
+            color: black;
+            border: none;
+            padding: 15px;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+            text-transform: uppercase;
+            font-size: 16px;
+            transition: background 0.3s;
+        }
+
+        .save-btn:hover {
+            background-color: #00cc00;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Adăugare Produs Nou în Catalog</h1>
+        <nav>
+            <a href="store.html">Înapoi la Magazin</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="form-container">
+            <form action="store.html" method="get">
+                <fieldset>
+                    <legend>Detalii Joc</legend>
+                    
+                    <div class="form-group">
+                        <label for="titlu">Nume Joc:</label>
+                        <input type="text" id="titlu" name="titlu" placeholder="Ex: EA SPORTS FC 26" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pret">Preț (EUR):</label>
+                        <input type="number" id="pret" name="pret" step="0.01" value="0.00" min="0">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cat">Categorie:</label>
+                        <select id="cat" name="cat">
+                            <option>Sport</option>
+                            <option>Acțiune</option>
+                            <option>Simulare</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="desc">Descriere scurtă:</label>
+                        <textarea id="desc" name="desc" rows="4" placeholder="Introduceți o descriere atractivă..."></textarea>
+                    </div>
+                </fieldset>
+
+                <button type="submit" class="save-btn">Salvează în Baza de Date</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 AleXteam</p>
+    </footer>
+
+</body>
+</html>

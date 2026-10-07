@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ștergere Produs - HTML5</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        
+
+        body {
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        main {
+            flex: unset;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .delete-dialog {
+            background-color: #1a1a1a;
+            border: 2px solid #ff0000;
+            padding: 18px;
+            text-align: center;
+            border-radius: 8px;
+            max-width: 300px;
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.2);
+        }
+
+        h2 {
+            color: #ff0000;
+            margin-top: 0;
+            text-transform: uppercase;
+        }
+
+        .btn-container {
+            margin-top: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .btn {
+            padding: 10px 30px;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            border-radius: 4px;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+        }
+
+        .btn-no {
+            background-color: #444444;
+            color: white;
+        }
+
+        .btn-no:hover {
+            background-color: #555555;
+        }
+
+        .btn-yes {
+            background-color: #ff0000;
+            color: white;
+        }
+
+        .btn-yes:hover {
+            background-color: #cc0000;
+        }
+    </style>
+</head>
+<body>
+
+    <main>
+        <div class="delete-dialog">
+            <h2>Confirmare Ștergere</h2>
+            <p>Sigur dorești să ștergi jocul <strong>EA FC 26</strong>?</p>
+            
+            <div class="btn-container">
+                <a href="store.html" class="btn btn-no">NU, ANULEAZĂ</a>
+                
+                <button class="btn btn-yes" onclick="alert('Produs șters!'); window.location.href='store.html';">
+                    DA, ȘTERGE
+                </button>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
